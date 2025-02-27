@@ -21,7 +21,7 @@ final class IpAddress extends AbstractRule
         return $this->ipAddress->getIdentifier();
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         return $this->requestorHasMatchingId($requestor, $this->ipAddress);
     }

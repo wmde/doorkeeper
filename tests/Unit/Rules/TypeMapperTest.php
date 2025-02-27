@@ -13,7 +13,7 @@ class TypeMapperTest extends TestCase
     public function testGetsIdForClassnameAndClassnameForId(): void
     {
         $extraType = new class extends Rules\AbstractRule {
-            protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+            protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
             {
                 return true;
             }

@@ -21,7 +21,7 @@ final class PipedComposite extends AbstractRule
         return $this->pipedComposite->getIdentifier();
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         return $this->requestorHasMatchingId($requestor, $this->pipedComposite);
     }

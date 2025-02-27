@@ -8,7 +8,7 @@ final class SetFactory
 {
     private Factory $featureFactory;
 
-    public function __construct(Factory $factory = null)
+    public function __construct(?Factory $factory = null)
     {
         $this->featureFactory = $factory ?? new Factory();
     }
