@@ -23,6 +23,6 @@ final class StringHash extends AbstractRule
 
     protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->hash);
+        return $this->requestorHasMatchingId( $this->hash, $requestor );
     }
 }

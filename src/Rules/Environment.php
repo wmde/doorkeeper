@@ -23,6 +23,6 @@ final class Environment extends AbstractRule
 
     protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->environment);
+        return $this->requestorHasMatchingId( $this->environment, $requestor );
     }
 }

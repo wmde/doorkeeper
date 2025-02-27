@@ -23,6 +23,6 @@ final class PipedComposite extends AbstractRule
 
     protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->pipedComposite);
+        return $this->requestorHasMatchingId( $this->pipedComposite, $requestor );
     }
 }
