@@ -10,7 +10,7 @@ final class Factory
 {
     private Rules\Factory $ruleFactory;
 
-    public function __construct(Rules\Factory $rulesFactory = null)
+    public function __construct(?Rules\Factory $rulesFactory = null)
     {
         $this->ruleFactory = $rulesFactory ?? new Rules\Factory();
     }

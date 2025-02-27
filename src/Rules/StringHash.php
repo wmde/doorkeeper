@@ -21,8 +21,8 @@ final class StringHash extends AbstractRule
         return $this->hash->getIdentifier();
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->hash);
+        return $this->requestorHasMatchingId( $this->hash, $requestor );
     }
 }

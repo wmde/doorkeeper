@@ -17,7 +17,7 @@ interface RuleInterface extends \JsonSerializable
 
     public function addPrerequisite(RuleInterface $rule): void;
 
-    public function canBeSatisfied(RequestorInterface $requestor = null): bool;
+    public function canBeSatisfied(?RequestorInterface $requestor = null): bool;
 
     /**
      * @return mixed|null

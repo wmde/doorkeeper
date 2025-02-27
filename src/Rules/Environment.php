@@ -21,8 +21,8 @@ final class Environment extends AbstractRule
         return $this->environment->getIdentifier();
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->environment);
+        return $this->requestorHasMatchingId( $this->environment, $requestor );
     }
 }

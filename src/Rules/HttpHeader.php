@@ -23,8 +23,8 @@ final class HttpHeader extends AbstractRule
         return $this->header->getIdentifier();
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId($requestor, $this->header);
+        return $this->requestorHasMatchingId( $this->header, $requestor );
     }
 }

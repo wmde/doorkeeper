@@ -8,7 +8,7 @@ final class Factory
 {
     private TypeMapper $ruleTypeMapper;
 
-    public function __construct(TypeMapper $typeMapper = null)
+    public function __construct(?TypeMapper $typeMapper = null)
     {
         $this->ruleTypeMapper = $typeMapper ?? new TypeMapper();
     }

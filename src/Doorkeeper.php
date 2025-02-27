@@ -21,8 +21,8 @@ final class Doorkeeper implements DoorkeeperInterface
 
     public function __construct(
         Features\Set $featureSet,
-        Utilities\RuntimeCache $cache = null,
-        PSRLog\LoggerInterface $auditLog = null
+        ?Utilities\RuntimeCache $cache = null,
+        ?PSRLog\LoggerInterface $auditLog = null
     ) {
         $this->featureSet = $featureSet;
         $this->auditLog = $auditLog ?? new PSRLog\NullLogger();
@@ -51,7 +51,7 @@ final class Doorkeeper implements DoorkeeperInterface
         return $this->grantsAccessToRequestor($featureName, $this->requestor);
     }
 
-    public function grantsAccessToRequestor(string $featureName, RequestorInterface $requestor = null): bool
+    public function grantsAccessToRequestor(string $featureName, ?RequestorInterface $requestor = null): bool
     {
         $logContext = [
             Logger\Processor::CONTEXT_KEY_REQUESTOR => $requestor,

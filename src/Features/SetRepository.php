@@ -23,7 +23,7 @@ final class SetRepository
         $this->cache->save($cacheItem);
     }
 
-    public function getFeatureSet(SetProviderInterface $fallback = null): Set
+    public function getFeatureSet(?SetProviderInterface $fallback = null): Set
     {
         $result = $this->cache->getItem(self::generateFeatureSetCacheKey())->get();
 

@@ -13,7 +13,7 @@ final class RuntimeCache
 
     private ?int $maxCacheItems;
 
-    public function __construct(int $maxCacheItems = null)
+    public function __construct(?int $maxCacheItems = null)
     {
         $this->maxCacheItems = $maxCacheItems;
     }
@@ -21,7 +21,7 @@ final class RuntimeCache
     /**
      * @return mixed|null
      */
-    public function get(string $key, callable $fallback = null)
+    public function get(string $key, ?callable $fallback = null)
     {
         if ($this->has($key)) {
             return $this->cache[$key];
