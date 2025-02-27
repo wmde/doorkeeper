@@ -20,7 +20,7 @@ class AbstractRule extends Rules\AbstractRule
     /**
      * @inheritdoc
      */
-    public function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    public function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         $requestor;
         return true;

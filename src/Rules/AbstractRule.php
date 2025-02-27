@@ -34,7 +34,7 @@ abstract class AbstractRule implements RuleInterface
         return null;
     }
 
-    final public function canBeSatisfied(RequestorInterface $requestor = null): bool
+    final public function canBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         if ($this->hasPrerequisites()) {
             foreach ($this->prerequisites as $prerequisite) {
@@ -57,8 +57,8 @@ abstract class AbstractRule implements RuleInterface
     }
 
     protected function requestorHasMatchingId(
-        RequestorInterface $requestor = null,
-        Identification\IdentificationInterface $identification
+        Identification\IdentificationInterface $identification,
+		?RequestorInterface $requestor = null
     ): bool {
         if (!$requestor) {
             return false;
@@ -67,5 +67,5 @@ abstract class AbstractRule implements RuleInterface
         return $requestor->hasIdentification($identification);
     }
 
-    abstract protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool;
+    abstract protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool;
 }

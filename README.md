@@ -1,7 +1,6 @@
 [![Total Downloads](https://poser.pugx.org/remotelyliving/doorkeeper/downloads)](https://packagist.org/packages/remotelyliving/doorkeeper)
 [![Coverage Status](https://coveralls.io/repos/github/remotelyliving/doorkeeper/badge.svg?branch=master)](https://coveralls.io/github/remotelyliving/doorkeeper?branch=master) 
 [![License](https://poser.pugx.org/remotelyliving/doorkeeper/license)](https://packagist.org/packages/remotelyliving/doorkeeper)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/remotelyliving/doorkeeper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/remotelyliving/doorkeeper/?branch=master)
 
 # Doorkeeper: a dynamic feature toggle
 

@@ -13,7 +13,7 @@ final class Percentage extends AbstractRule
 
     private Utilities\Randomizer $randomizer;
 
-    public function __construct(int $percentage, Utilities\Randomizer $randomizer = null)
+    public function __construct(int $percentage, ?Utilities\Randomizer $randomizer = null)
     {
         if ($percentage < 0 || $percentage > 100) {
             throw new \InvalidArgumentException("Percentage must be represented as a value from 1 to 100");
@@ -28,7 +28,7 @@ final class Percentage extends AbstractRule
         return $this->chances;
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         $lotteryNumber = $this->randomizer->generateRangedRandomInt(1, 100);
 

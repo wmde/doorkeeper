@@ -8,5 +8,5 @@ interface DoorkeeperInterface
 {
     public function grantsAccessTo(string $featureName): bool;
 
-    public function grantsAccessToRequestor(string $featureName, RequestorInterface $requestor = null): bool;
+    public function grantsAccessToRequestor(string $featureName, ?RequestorInterface $requestor = null): bool;
 }

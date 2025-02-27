@@ -18,7 +18,7 @@ final class RuntimeCallable extends AbstractRule
         $this->runtimeCallable = $runtimeCallable;
     }
 
-    protected function childCanBeSatisfied(RequestorInterface $requestor = null): bool
+    protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
         $localFn = $this->runtimeCallable;
         return (bool) $localFn($requestor);
