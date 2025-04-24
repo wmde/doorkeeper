@@ -20,7 +20,7 @@ class RuntimeCallableTest extends TestCase
             return false;
         });
 
-        $callableWithRequestor = new Rules\RuntimeCallable(function (Requestor $requestor = null) {
+        $callableWithRequestor = new Rules\RuntimeCallable(function (?Requestor $requestor = null) {
             return (bool) $requestor;
         });
 

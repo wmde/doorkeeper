@@ -58,7 +58,7 @@ abstract class AbstractRule implements RuleInterface
 
     protected function requestorHasMatchingId(
         Identification\IdentificationInterface $identification,
-		?RequestorInterface $requestor = null
+        ?RequestorInterface $requestor = null
     ): bool {
         if (!$requestor) {
             return false;

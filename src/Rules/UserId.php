@@ -26,6 +26,6 @@ final class UserId extends AbstractRule
 
     protected function childCanBeSatisfied(?RequestorInterface $requestor = null): bool
     {
-        return $this->requestorHasMatchingId( $this->userId, $requestor );
+        return $this->requestorHasMatchingId($this->userId, $requestor);
     }
 }
